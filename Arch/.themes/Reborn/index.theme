@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=BSM Reborn
+Comment=BSM Reborn
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=BSM Reborn
+MetacityTheme=BSM Reborn
+IconTheme=Moka-Minimal
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

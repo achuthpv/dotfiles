@@ -1,0 +1,42 @@
+while true; do
+
+SEP=$(echo -e '\ue105');
+
+#DWM_MPC=$( echo -e  '\ue04d' `~/bin/mpd.sh`);
+
+DWM_MPC=()
+{
+	MPCSTATUS=$(mpc status | grep -E "(playing|paused)" -0)
+	PROGRESS=$(mpc status | grep -E "(playing|paused)" | rev | cut -c 3- | rev | cut -d "(" -f 2)
+	FULL=$((PROGRESS / 2))
+	SHADE=$((50 - full))
+
+	if [ "$MPCSTATUS" == "playing" ]; then
+		icon="\ue034"
+	else
+		icon="\ue037"
+	fi
+
+	echo -e -n "%{A:mpc -q prev && ${UPDATE}:} \ue045%{A}%{A:mpc -q toggle && ${UPDATE}:} " $icon
+};
+
+
+#Checkupdates
+DWM_PAC=$( echo -e '\ue00e' `checkupdates | wc -l`);
+
+#MEM
+DWM_MEM=$( echo -e  '\ue021' `free -mh | awk '/^Mem/ {print $3}'`);
+
+
+# Volume Level
+DWM_VOL=$( echo -e  '\ue050' `amixer get Master | awk '$0~/%/{print $4}' | head -n 1 | tr -d '[]'` );
+
+# Date and Time
+DWM_CLOCK=$( echo -e '\ue017' `date +"%F %R"`);
+
+# Overall output command
+DWM_STATUS=" $DWM_PAC $SEP  $DWM_MPC $SEP $DWM_MEM $SEP $DWM_VOL $SEP $DWM_CLOCK";
+xsetroot -name "$DWM_STATUS";
+sleep 1m;
+
+done &

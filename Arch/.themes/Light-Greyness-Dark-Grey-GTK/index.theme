@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+Name=Light-Greyness-Dark-Grey-GTK
+Type=X-GNOME-Metatheme
+Comment=There is only one
+Encoding=UTF-8
+GtkTheme=Light-Light-Greyness-Dark-Grey-GTK
+MetacityTheme=Light-Greyness-Dark-Grey-GTK
+IconTheme=gnome
+CursorTheme=DMZ-White
+CursorSize=24

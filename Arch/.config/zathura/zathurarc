@@ -1,0 +1,14 @@
+set font "Pragmata Medium 10"
+set default-bg "#30303a"
+set default-fg "#d6d6d6"
+set statusbar-bg "#30303a"
+set statusbar-fg "#d6d6d6"
+set inputbar-fg "#aaaaaa"
+set completion-highlight-bg "#30303a"
+set completion-highlight-fg "#aaaaaa"
+set window-height 800
+set window-width 1400
+set zoom-step 20
+set scroll-step 80
+set selection-clipboard clipboard
+set incremental-search true

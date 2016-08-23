@@ -1,0 +1,113 @@
+import XMonad
+import Control.Monad
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig(additionalKeys)
+import System.IO
+import XMonad.Layout.Circle
+import XMonad.Layout.Spiral
+import XMonad.Layout.Spacing
+import XMonad.Layout.Fullscreen
+import XMonad.Layout.Grid
+import XMonad.Layout.NoBorders
+import qualified XMonad.StackSet as W
+import qualified Data.Map as M
+import qualified GHC.IO.Handle.Types as H
+
+
+--------------------------------------------------------------------------
+-- workspace --
+--------------------------------------------------------------------------
+ic = " ^i(/home/tiago/.xmonad/.icons/"
+
+myWorkspaces :: [String]
+myWorkspaces = clickable $ [ ic ++ "media.xbm) "
+                         , ic ++ "messenger1.xbm) "
+                         , ic ++ "www.xbm) "
+                         , ic ++ "file1.xbm) "
+                         , ic ++ "rss1.xbm) "
+                         , ic ++ "docs.xbm) "
+                         , ic ++ "term.xbm) "
+                         ]
+           where clickable l = [ "^ca(1,xdotool key super+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
+                                 (i,ws) <- zip [1..] l,
+                                 let n = i ]
+
+
+laycon		= "/home/tiago/.xmonad/.icons/stlarch/"
+
+--------------------------------------------------------------------------
+-- style --
+--------------------------------------------------------------------------
+myLogHook h = do
+	dynamicLogWithPP $ tryPP h
+tryPP :: Handle -> PP
+tryPP h = defaultPP
+	{ ppOutput		= hPutStrLn h
+	, ppCurrent 		= dzenColor "#f8f8f8" "#151515" . pad
+	, ppVisible		= dzenColor "#808080" "#151515" . pad
+	, ppHidden		= dzenColor "#808080" "#151515" . pad
+	, ppHiddenNoWindows	= dzenColor "#8f8f8f" "#151515" . pad
+	, ppWsSep		= ""
+	, ppSep			= " "
+	, ppLayout		= dzenColor "#b3b3b3" "#151515" .
+				  ( \x -> case x of
+					"Spacing 10 Grid"      	-> "^ca(1,xdotool key super+space)^i("++laycon++"grid.xbm)^ca()"
+					"Spacing 10 Spiral"	-> "^ca(1,xdotool key super+space)^i("++laycon++"spiral.xbm)^ca()"
+					"Spacing 10 Circle" 	-> "^ca(1,xdotool key super+space)^i("++laycon++"circle.xbm)^ca()"
+					"Spacing 10 Tall"	-> "^ca(1,xdotool key super+space)^i("++laycon++"sptal.xbm)^ca()"
+					"Mirror Spacing10 Tall"	-> "^ca(1,xdotool key super+space)^i("++laycon++"nbstack.xbm)^ca()"
+				        "Full"                  -> "^ca(1,xdotool key super+space)^i("++laycon++"mptal.xbm)^ca()"
+                                        )
+	                                }
+
+dzenFont = "lime-11"
+
+---------------------------------------------------------------------------
+-- additional key --
+---------------------------------------------------------------------------
+myKeys = [ ((mod4Mask, xK_a), spawn "firefox")
+        , ((mod4Mask, xK_p), spawn  "dmenu_run -x 3 -y 20 -w 180 -l 5 -h 16 -i -q -fn 'xft:FontAwesome:pixelsize=10' -nb '#1D1F21' -nf '#FAFAFA' -sb '#151515' -sf '#FEFEFE'")
+        , ((0, xK_Print), spawn "scrot %Y-%m-%d-%T.png -e 'mv $f ~/Imagens'")
+        , ((mod4Mask, xK_q), spawn "killall dzen2; xmonad --recompile; xmonad --restart")]
+
+
+
+---------------------------------------------------------------------------
+-- layout tiling --
+---------------------------------------------------------------------------
+
+myLayout = avoidStruts $ smartBorders (  sGrid ||| sSpiral ||| sCircle ||| sTall ||| Mirror sTall ||| Full )
+        where
+         sTall = spacing 10 $ Tall 1 (1/2) (1/2)
+         sGrid = spacing 10 $ Grid
+         sCircle = spacing 10 $ Circle
+         sSpiral = spacing 10 $ spiral (toRational (2/(1+sqrt(5)::Double)))
+
+
+---------------------------------------------------------------------------
+-- main code --
+---------------------------------------------------------------------------
+
+main = do
+	bar <- spawnPipe dzenbar
+	bar2 <- spawnPipe "sh /home/tiago/.xmonad/dzenbar.sh"
+	xmonad $ defaultConfig
+		{ manageHook = manageDocks <+> manageHook defaultConfig
+		, layoutHook = myLayout 
+		, borderWidth = 3
+		, normalBorderColor = "#161616"
+		, focusedBorderColor = "#161616"
+		, terminal = "termite"
+		, workspaces = myWorkspaces
+		, modMask = mod4Mask
+                , startupHook = setWMName "LG3D"
+                , logHook = myLogHook bar
+		} `additionalKeys` myKeys
+		where
+                dzenbar	= "dzen2 -p -ta l -e 'button3=' -fn '" ++ dzenFont  ++ "' -h 20 -w 650"
+
+
+

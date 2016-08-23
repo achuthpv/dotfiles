@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 128 128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   sodipodi:docname="astah-community.svg"
+   width="128"
+   height="128">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     id="namedview17"
+     showgrid="false"
+     inkscape:zoom="3.4766083"
+     inkscape:cx="38.507212"
+     inkscape:cy="58.721168"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="0"
+       x1="62.990002"
+       y1="22.532"
+       x2="62.18"
+       y2="-27.299"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         id="stop9"
+         offset="0"
+         stop-color="#feb600" />
+      <stop
+         id="stop7"
+         stop-color="#f16419"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#0"
+       id="linearGradient4146"
+       x1="-63.280048"
+       y1="121.09672"
+       x2="-65.293503"
+       y2="7.7678757"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(123.13708,0)" />
+  </defs>
+  <rect
+     style="opacity:1;fill:url(#linearGradient4146);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.89999962;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50273222"
+     id="rect3338"
+     width="113.90412"
+     height="113.90412"
+     x="7.219533"
+     y="7.1926026"
+     rx="14.326612" />
+  <path
+     d="m 63.255892,32.032555 c -2.294936,3.195573 -3.648298,7.113581 -3.648298,11.34946 0,2.326242 0.40938,4.556159 1.155896,6.624732 1.353363,-0.226363 3.092024,-0.476807 4.703055,-0.700762 -0.758558,-2.080614 -1.172754,-4.327388 -1.172754,-6.670487 0,-3.665155 1.013818,-7.091907 2.774152,-10.020178 L 63.253484,32.030147 M 27.01131,43.952739 21.053627,46.88101 c 4.394815,6.029927 11.505987,9.952751 19.539468,9.952751 2.641705,0 5.177454,-0.435869 7.556674,-1.220915 l 0,32.822646 6.027519,0 0,-15.243386 c 0.597213,-1.887964 2.357547,-3.248551 4.447794,-3.248551 2.083022,0 3.83854,1.353362 4.440569,3.229286 l 0,15.262651 6.027519,0 0,-7.566306 0,-8.288742 0,-0.341953 c 0,-4.192533 -3.376181,-7.566306 -7.568714,-7.566306 -3.566423,0 -6.53804,2.441832 -7.349576,5.750585 l 0,-19.457592 -6.027519,0 0,-0.01204 c -1.081245,0.139671 -2.176939,0.233588 -3.294305,0.233588 -6.93538,0 -13.225384,-2.757295 -17.844154,-7.224354 m 66.447197,0.19265 c -8.209274,0 -15.705745,3.055901 -21.415393,8.091276 0.876555,0.7417 2.29012,2.003554 3.715726,3.294305 5.666302,-4.317755 12.741352,-6.882401 20.416024,-6.882401 4.064904,0 7.961244,0.720027 11.571014,2.039676 l -0.93435,-3.67238 c -4.07213,-1.844619 -8.592172,-2.870477 -13.350613,-2.870477 m -22.181174,16.011575 -4.15882,4.15882 c 13.675702,6.029927 24.346072,17.639463 29.090064,31.948504 l 8.861883,-2.05894 C 100.1892,77.986669 87.452661,65.173074 71.284557,60.164188"
+     id="path15"
+     inkscape:connector-curvature="0"
+     style="fill:#feeddc;fill-rule:evenodd" />
+</svg>

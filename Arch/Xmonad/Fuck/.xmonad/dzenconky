@@ -1,0 +1,23 @@
+background yes
+out_to_console yes
+out_to_x no
+update_interval 0,5
+use_xft yes 
+total_run_times 0
+use_spacer none
+
+TEXT
+ ^fg(\#C12B4D)^i(/home/tiago/.xmonad/.icons/arrow_big_01.xbm)^fg()^bg(\#C12B4D)\
+ ^i(/home/tiago/.xmonad/.icons/clock1.xbm)  ${exec date | awk '{print $4}'}  \
+ ^fg(\#1D1F21)^i(/home/tiago/.xmonad/.icons/arrow_big_01.xbm)^fg()^bg(\#1D1F21)\
+ ^i(/home/tiago/.xmonad/.icons/mem.xbm)  ${exec sh /home/tiago/.xmonad/mem.sh}  \
+ ^i(/home/tiago/.xmonad/.icons/cpu.xbm)  ${cpu cpu0}%  \
+ ^i(/home/tiago/.xmonad/.icons/net_up_01.xbm)  ${exec ethtool enp3s0 | grep "Link detected:" | sed s/"Link detected:"// | xargs} \
+ ^fg(\#C12B4D)^i(/home/tiago/.xmonad/.icons/arrow_big_01.xbm)^fg()^bg(\#C12B4D)\
+ ^i(/home/tiago/.xmonad/.icons/phones.xbm)  ${exec sh /home/tiago/.xmonad/func_mpc.sh}  \
+ ^fg(\#1D1F21)^i(/home/tiago/.xmonad/.icons/arrow_big_01.xbm)^fg()^bg(\#1D1F21)\
+ ^i(/home/tiago/.xmonad/.icons/vol.xbm)  ${exec amixer sget Master | grep -m1 "%]" | cut -d "[" -f2 | cut -d "]" -f1} \
+ ^fg(\#C12B4D)^i(/home/tiago/.xmonad/.icons/arrow_big_01.xbm)^fg()^bg(\#C12B4D)\
+ ^i(/home/tiago/.xmonad/.icons/temp.xbm) ${exec sh /home/tiago/.xmonad/Weather}  \
+ ^i(/home/tiago/.xmonad/.icons/mail.xbm) ${exec sh /home/tiago/.xmonad/mail.sh}  \
+ ^i(/home/tiago/.xmonad/.icons/pacman.xbm) ${exec sh /home/tiago/.xmonad/pacman.sh}   \
