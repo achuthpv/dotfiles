@@ -2,23 +2,7 @@ while true; do
 
 SEP=$(echo -e '\ue105');
 
-#DWM_MPC=$( echo -e  '\ue04d' `~/bin/mpd.sh`);
-
-DWM_MPC=()
-{
-	MPCSTATUS=$(mpc status | grep -E "(playing|paused)" -0)
-	PROGRESS=$(mpc status | grep -E "(playing|paused)" | rev | cut -c 3- | rev | cut -d "(" -f 2)
-	FULL=$((PROGRESS / 2))
-	SHADE=$((50 - full))
-
-	if [ "$MPCSTATUS" == "playing" ]; then
-		icon="\ue034"
-	else
-		icon="\ue037"
-	fi
-
-	echo -e -n "%{A:mpc -q prev && ${UPDATE}:} \ue045%{A}%{A:mpc -q toggle && ${UPDATE}:} " $icon
-};
+DWM_MPC=$( echo -e  '\ue04d' `~/bin/mpd.sh`);
 
 
 #Checkupdates

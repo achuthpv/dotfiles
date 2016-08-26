@@ -48,9 +48,9 @@ tryPP :: Handle -> PP
 tryPP h = def
 	{ ppOutput		= hPutStrLn h
 	, ppCurrent 		= dzenColor "#f8f8f8" "#C12B4D" . pad
-	, ppVisible		= dzenColor "#1D1F21" "#C12B4D" . pad
-	, ppHidden		= dzenColor "#1D1F21" "#C12B4D" . pad
-	, ppHiddenNoWindows	= dzenColor "#1D1F21" "#C12B4D" . pad
+	, ppVisible		= dzenColor "#C5C8C6" "#1D1F21" . pad
+	, ppHidden		= dzenColor "#C5C8C6" "#1D1F21" . pad
+	, ppHiddenNoWindows	= dzenColor "#C5C8C6" "#1D1F21" . pad
 	, ppWsSep		= ""
 	, ppSep			= " "
 	, ppLayout		= dzenColor "#b3b3b3" "#1D1F21" .

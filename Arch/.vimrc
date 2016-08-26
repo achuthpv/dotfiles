@@ -1,5 +1,4 @@
-
-
+"
 "
 "                         ███████████████████████████
 "                         ███████▀▀▀░░░░░░░▀▀▀███████
@@ -21,42 +20,63 @@
 "                         ██████████▄▄▄▄▄▄▄██████████
 "                         ███████████████████████████
 "
-"   You are about to experience a potent dosage of Vim. Watch your steps.
+"   
 "
+"    
+"     
 "                ╔══════════════════════════════════════════╗
-"                ║           ⎋ HERE BE VIMPIRES ⎋           ║
+"                ║           Created by Morgareth           ║
+"                ║                                          ║ 
+"                ║        Email:thiagors1983@gmail.com      ║ 
+"                ║                                          ║ 
 "                ╚══════════════════════════════════════════╝
-set shell=/bin/zsh "Sets the shell  
-"set nocompatible "Use the vim settings, not vi
-filetype plugin on "Enables the recognition files 
+"
+"
+"
+
+"Flagging Unnecessary Whitespace
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"Autocomplete
+autocmd Filetype python set omnifunc=pythoncomplete#Complete "Autocomplete for pyhon
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" Indentation according to PEP8
+
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufRead,BufNewFile *.py,*.pyw set textwidth=139
+au BufRead,BufNewFile *.py,*.pyw set tabstop=4
+au BufRead,BufNewFile *.py,*.pyw set softtabstop=4
+au BufRead,BufNewFile *.py,*.pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set autoindent
+au         BufNewFile *.py,*.pyw set fileformat=unix
+
+" Syntax highlighting for markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+"Visual and generall settings 
+set shell=/bin/zsh "Sets the shell
+set nocompatible "Use the vim settings, not vi
+set completeopt=longest,menuone
+filetype plugin on "Enables the recognition files
 filetype indent on
 set magic "Enable regular expressions
-
-"Formating
-set autoindent          " automatically indent lines
-"set copyindent          " copy indent from previous line
-set expandtab           " use spaces to indent
-set shiftwidth=4        " number of spaces for indent
-set smarttab            " backspace over tabs
-set softtabstop=4       " tab = softtabstop * spaces
-set tabstop=4           " tab stop distance
-set shiftround          " be clever with tabs
-
-"Visual
 set background=dark     " we're using a dark bg
-colorscheme  monokai    " colorscheme from plugin 
+colorscheme badwolf  " colorscheme from plugin 
 set laststatus=2        " always show statusline
 set ruler   "Ruler breaks
 set wrap    "It allows navigation within a long line with j and k
 set showcmd " Show me what I'm typing
 set hlsearch " Highlight found searches
-set lazyredraw
+set lazyredraw "Redraw only when we need to. 
 set splitbelow " Split horizontal windows below to the current windows
 set splitright " Split vertical windows right to the current windows
-set fileformat=unix " Prefer Unix format
 set t_Co=256 " Enable 256 colors
 syntax on   "  Syntax highlighting
 set nolinebreak
+set showmatch  " highlight matching [{()}]
 set number  "Show line numbers
 set relativenumber
 set updatetime=250 
@@ -71,11 +91,13 @@ hi TabLineFill ctermfg=White ctermbg=Yellow
 hi TabLine ctermfg=Blue ctermbg=Yellow
 
 "Visual Gui
-set guifont=DroidSansMonoPLNerd:h12 
+
+set guifont=FantasqueSansMono\ 8
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+set guiheadroom=0
 
 " Better copy & paste
 set pastetoggle=<F2>
@@ -96,15 +118,12 @@ set history=50
 set noswapfile " Don't use swapfile
 
 " Use modeline overrides
-set modeline
 set modelines=10
 
 "Handling
 set backspace=indent,eol,start "Makes backspace key more powerful.
 set clipboard=unnamedplus "Clipboard system
-set foldignore=" "
-set foldlevelstart=10
-set foldnestmax=10
+set foldlevel=0
 set foldmethod=marker
 set ignorecase " Search case insensitive...
 set smartcase
@@ -130,6 +149,8 @@ nmap <C-PageDown> :tabprevious<CR>
 nmap <C-x> :tabclose<CR> 
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>  
 nmap <silent> <C-C> :silent noh<CR> 
+
+"Save,exit and quit
 inoremap <C-s> <esc>:w<cr>                 " save files
 nnoremap <C-s> :w<cr>
 inoremap <C-d> <esc>:wq!<cr>               " save and exit
@@ -137,29 +158,53 @@ nnoremap <C-d> :wq!<cr>
 inoremap <C-q> <esc>:qa!<cr>               " quit discarding changes
 nnoremap <C-q> :qa!<cr>
 
+"split navigations
+nnoremap <Up> :echomsg "use k"<cr>
+nnoremap <Down> :echomsg "use j"<cr>
+nnoremap <Left> :echomsg "use h"<cr>
+nnoremap <Right> :echomsg "use l"<cr>
+
+"Save session
+nnoremap <leader>s :mksession<CR>
+
+" Toggling the display of a widget
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
+
+" Completion Menu
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+
 "Completion
- set wildmode=list:longest
- set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
- set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
- set wildignore+=*vim/backups*
- set wildignore+=*sass-cache*
- set wildignore+=*DS_Store*
- set wildignore+=vendor/rails/**
- set wildignore+=vendor/cache/**
- set wildignore+=*.gem
- set wildignore+=log/**
- set wildignore+=tmp/**
- set wildignore+=*.png,*.jpg,*.gif
+set wildmode=list:longest
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
  
 "Scrolling 
 "Start scrolling when we're 8 lines away from  margins
- set scrolloff=8         
- set sidescrolloff=15
- set sidescroll=1
+set scrolloff=8         
+set sidescrolloff=15
+set sidescroll=1
 
 " Plugins
 
-"Patogen
+" Settings for  Patogen
 execute pathogen#infect()
 
 " NerdTree {
@@ -181,12 +226,13 @@ execute pathogen#infect()
       " }
 
                                     
-"Vim-airline
-let g:airline_theme = 'wombat'
+" " Settings for Vim-airline
+let g:airline_theme = 'badwolf'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
 "Vim-airline
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -223,31 +269,8 @@ else
   let g:airline_symbols.linenr = ''
 endif
 
-
-" Settings for jedi-vim
- let g:jedi#usages_command = "<leader>z"
- let g:jedi#popup_on_dot = 0
- let g:jedi#popup_select_first = 0
- map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
-
-" Better navigating through omnicomplete option list
-" See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
- set completeopt=longest,menuone
- function! OmniPopup(action)
-     if pumvisible()
-         if a:action == 'j'
-             return "\<C-N>"
-         elseif a:action == 'k'
-             return "\<C-P>"
-         endif
-     endif
-     return a:action
- endfunction
-
- inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
- inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
-
 " Settings for python-mode
+
  map <Leader>g :call RopeGotoDefinition()<CR>
  let ropevim_enable_shortcuts = 1
  let g:pymode_rope_goto_def_newwin = "vnew"
@@ -258,14 +281,16 @@ endif
  let g:pymode_syntax_builtin_funcs = 0
  map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
-" Minimap 
+" Settings for Minimap 
+
 let g:minimap_highlight='Visual'
 let g:minimap_show='<leader>ms'
 let g:minimap_update='<leader>mu'
 let g:minimap_close='<leader>gc'
 let g:minimap_toggle='<leader>gt'
 
-" Vim-gitgutter
+" Settings for Vim-gitgutter
+
 let g:gitgutter_override_sign_column_highlight = 0
 highlight SignColumn ctermbg=237
 let g:gitgutter_sign_column_always = 1
@@ -274,3 +299,45 @@ let g:gitgutter_sign_modified = 'yy'
 let g:gitgutter_sign_removed = 'zz'
 let g:gitgutter_sign_removed_first_line = '^^'
 let g:gitgutter_sign_modified_removed = 'ww'
+
+" Settings for Syntastic 
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+
+" Settings for Vim-Nerdtree-Tabs
+
+let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_focus_on_files = 1
+
+" Settings for Vim-Easy-Tags
+let g:easytags_async = 1 
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+let g:easytags_resolve_links = 1
+let g:easytags_suppress_ctags_warning = 1
+
+" Settings for Tagbar 
+nmap <silent> <leader>b :TagbarToggle<CR>
+
+" Settings for ctrlP
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+" Settings for indentLine
+
+let g:indentLine_color_term = 197
+let g:indentLine_char = '│'
+

@@ -20,6 +20,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 ##----------------------------------------------------------------------------##
+## Locales
+##----------------------------------------------------------------------------##
+
+export LANG=pt_BR.UTF-8
+export LC_MESSAGES=pt_BR.UTF-8
+export MM_CHARSET=UTF-8
+
+##----------------------------------------------------------------------------##
 ## Mpd autostart 
 ##----------------------------------------------------------------------------##
 
@@ -42,17 +50,31 @@ xset fp rehash
 xset -dpms
 xset s off
 
-
 ##----------------------------------------------------------------------------##
 ## General settings 
 ##----------------------------------------------------------------------------##
-xsetroot -cursor_name left_ptr
-urxvtd -q -o -f
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+xsetroot -cursor_name left_ptr&
+
+##----------------------------------------------------------------------------##
+## Wallpapers 
+##----------------------------------------------------------------------------##
+
 nitrogen --restore &
+
+##----------------------------------------------------------------------------------------------------------------------##
+## Daemon
+##----------------------------------------------------------------------------------------------------------------------##
+
+devmon --exec-on-video "notify-send '%f mounted' 'Launching mpv...' -i mpv & mpc pause & mpv -vo opengl-hq dvdnav://menu"\
+	--exec-on-drive "thunar %d"\
+	--exec-on-disc "thunar %d"\
+--exec-on-unmount "notify-send '%f' 'The device was successfully unmounted.' -i eject" &
+
+dunst &
 compton --config ~/.config/compton.conf  &
 udiskie &
-unclutter &
+numlockx &
 
 ##----------------------------------------------------------------------------##
 ## startx
@@ -70,13 +92,9 @@ _start_session() {
       i3|i3wm           ) exec i3;;
       mate              ) exec mate-session;;
       openbox           ) exec openbox-session;;
-      xfce|xfce4        ) exec startxfce4;;
+      xfce4             ) exec startxfce4;;
       # No known session, try to run it as command
       *) exec "$1";;
   esac
 }
 _start_session "$@"
-
-
-
-

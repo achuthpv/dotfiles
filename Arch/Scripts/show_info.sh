@@ -27,8 +27,8 @@ cpuspe=$(grep 'model name' /proc/cpuinfo| sed 1q|sed 's/^.*:\ *//')
 system=$(cat /etc/os-release | sed '2,$d;s/NAME="//;s/"//')
 
 if [ -n "$DISPLAY" ]; then
-    wmname=$(xprop -root _NET_WM_NAME|cut -d\" -f2)
-    termfn=$(cat $HOME/.Xresources | grep -v ! | awk '/*font/ {print $2}' | sed 's/xft://;s/:pixelsize//;s/=/\ /')
+    wmname=$(wmctrl -m | grep -i name | awk '{print $2}')
+    termfn=$(cat $HOME/.Xresources | grep -v ! | awk '/.font/ {print $2}' | sed 's/xft://;s/:pixelsize//;s/=/\ /')
     systfn=$(sed -n 's/^[gtk].*font.*"\(.*\)".*$/\1/p' ~/.gtkrc-2.0)
 else
     wmname="none"

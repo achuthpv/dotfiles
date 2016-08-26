@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scrot %Y-%m-%d-%T.png -e 'mv $f ~/Imagens' $1
+notify-send "Screenshot taken and saved to \"~/Imagens$1\"."
