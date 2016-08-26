@@ -31,7 +31,7 @@
 		"player":                    { "fg": "gray10", "bg": "black", "attr": [] },
 		"user":                      { "fg": "white", "bg": "gray2", "attr":["bold"]},
 		"superuser":                 { "fg": "yellow", "bg": "orange", "attr": ["bold"] },
-		"branch":                    { "fg": "gray1", "bg": "green", "attr": [] },
+		"branch":                    { "fg": "white", "bg":  "red", "attr": [] },
 		"branch_dirty":              { "fg": "brightyellow", "bg": "darkblue", "attr": [] },
 		"branch_clean":              { "fg": "gray9", "bg": "darkblue", "attr": [] },
 		"branch:divider":            { "fg": "gray7", "bg": "darkblue", "attr": [] },

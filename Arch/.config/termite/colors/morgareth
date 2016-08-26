@@ -1,4 +1,4 @@
- [options]
+[options]
     resize_grip = false
     scroll_on_output = false
     scroll_on_keystroke = true
@@ -37,7 +37,6 @@ foreground      = #d8d8d8
 foreground_bold = #d8d8d8
 cursor          =  #C12B4D
 background      = #101112
-
 
 # black
 color0  = #101112
