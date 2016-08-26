@@ -29,4 +29,4 @@ Xmonad
 [facebook]: https://www.facebook.com/Morgareth77
 [twitter]: https://twitter.com/Morgareth77
 [screenshot]: https://cdn.rawgit.com/Athanasi/dutfiles/master/Arch/Screenshots/13442254_1015912321818129_2846794945451042775_n.jpg
-[screenshot1]:https://github.com/Athanasi/dutfiles/blob/master/Arch/Screenshots/2016-08-01-20:42:49.png
+[screenshot1]:https://cdn.rawgit.com/Athanasi/dotfiles/master/Arch/Screenshots/2016-08-26-00:45:09.png
