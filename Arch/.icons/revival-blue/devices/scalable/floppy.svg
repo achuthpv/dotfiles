@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: flash2svg, http://dissentgraphics.com/tools/flash2svg -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Floppy"
+   image-rendering="optimizeSpeed"
+   version="1.1"
+   style="background-color:#FFFFFF"
+   x="0px"
+   y="0px"
+   width="1024px"
+   height="1024px"
+   viewBox="0 0 1024 1024"
+   enable-background="new 0 0 1024 1024"
+   inkscape:version="0.91 r"
+   sodipodi:docname="floppy.svg">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="0.23046875"
+     inkscape:cx="512"
+     inkscape:cy="512"
+     inkscape:window-x="10"
+     inkscape:window-y="34"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Floppy" />
+  <defs
+     transform="matrix(1 0 0 1 0 0) "
+     id="defs3">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3379">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop3381" />
+      <stop
+         id="stop3387"
+         offset="0.09142562"
+         style="stop-color:#808080;stop-opacity:1" />
+      <stop
+         style="stop-color:#333333;stop-opacity:1"
+         offset="0.56394416"
+         id="stop3389" />
+      <stop
+         id="stop3391"
+         offset="0.90487158"
+         style="stop-color:#000000;stop-opacity:1" />
+      <stop
+         style="stop-color:#333333;stop-opacity:0;"
+         offset="1"
+         id="stop3383" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3365">
+      <stop
+         style="stop-color:#cccccc;stop-opacity:1;"
+         offset="0"
+         id="stop3367" />
+      <stop
+         id="stop3373"
+         offset="0.13477327"
+         style="stop-color:#f9f9f9;stop-opacity:1" />
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1"
+         offset="0.48131368"
+         id="stop3377" />
+      <stop
+         style="stop-color:#999999;stop-opacity:1"
+         offset="0.89411646"
+         id="stop3375" />
+      <stop
+         style="stop-color:#cccccc;stop-opacity:0;"
+         offset="1"
+         id="stop3369" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3365"
+       id="linearGradient3371"
+       x1="264.67798"
+       y1="-78.101692"
+       x2="841.7627"
+       y2="390.50848"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3379"
+       id="linearGradient3385"
+       x1="-8.6779661"
+       y1="-112.81356"
+       x2="1067.3898"
+       y2="1141.1526"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="Calque.__203">
+    <g
+       id="shape">
+      <path
+         id="path"
+         fill="#000000"
+         fill-opacity="0.09803921568627451"
+         d="M947.9,208.4 L796.3,56.85 150.85,56.85 C143.2,56.85 136.6,59.55 131.15,64.95 125.7,70.4 123,77 123,84.7 L123,974.2 C123,981.9 125.7,988.45 131.15,993.85 136.6,999.3 143.2,1002.05 150.85,1002.05 L920,1002.05 C927.7,1002.05 934.25,999.3 939.7,993.85 945.15,988.45 947.9,981.9 947.9,974.2 L947.9,208.4z" />
+    </g>
+  </g>
+  <path
+     id="path1"
+     d="M 924.9,145.4 813.35,33.85 l -55.1,0 0,268.7 c -0.35,10.45 -5.9,15.65 -16.7,15.65 l -373.45,0 -164.7,0 c -10.8,0 -16.35,-5.2 -16.7,-15.65 l 0,-268.7 -58.8,0 c -7.7,0 -14.3,2.7 -19.75,8.15 -5.4,5.45 -8.1,12.05 -8.1,19.7 l 0,889.55 c 0,1.05 0.05,2.05 0.15,3 0.65,6.4 3.3,11.95 7.95,16.65 5.45,5.45 12.05,8.2 19.75,8.2 l 54.65,0 0,-36.85 0,-396.65 c 0,-11.15 5.55,-16.75 16.7,-16.75 l 626.4,0 c 11.15,0 16.75,5.6 16.75,16.75 l 0,396.65 0,36.85 54.65,0 c 7.7,0 14.25,-2.75 19.65,-8.2 4.75,-4.7 7.4,-10.25 8.05,-16.65 0.1,-0.95 0.15,-1.95 0.15,-3 l 0,-805.85 z"
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient3385);fill-opacity:1" />
+  <path
+     id="path2"
+     d="m 741.55,318.2 c 10.8,0 16.35,-5.2 16.7,-15.65 l 0,-268.7 -390.15,0 0,284.35 373.45,0 z"
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient3371);fill-opacity:1" />
+  <path
+     id="path3"
+     d="m 842.4,545.6 c 0,-11.15 -5.6,-16.75 -16.75,-16.75 l -626.4,0 c -11.15,0 -16.7,5.6 -16.7,16.75 l 0,396.65 659.85,0 0,-396.65 z"
+     inkscape:connector-curvature="0"
+     style="fill:#dbf2f7;fill-opacity:1" />
+  <path
+     id="path4"
+     d="m 368.1,318.2 0,-284.35 -181.4,0 0,268.7 c 0.35,10.45 5.9,15.65 16.7,15.65 l 164.7,0 z"
+     inkscape:connector-curvature="0"
+     style="fill:#666666;fill-opacity:1" />
+  <path
+     id="path5"
+     d="m 182.55,942.25 0,36.85 659.85,0 0,-36.85 -659.85,0 z"
+     inkscape:connector-curvature="0"
+     style="fill:#a8babe;fill-opacity:1" />
+  <g
+     id="Calque.__205">
+    <g
+       id="shape9"
+       transform="matrix(1 0 0 1 238.05 606.15)" />
+  </g>
+  <g
+     id="Calque.__206">
+    <g
+       id="shape10">
+      <path
+         id="path6"
+         fill="#666666"
+         fill-opacity="1"
+         d="M693.95,110.85 Q693.95,94.15 677.25,94.15 L639.35,94.15 C628.2,94.15 622.6,99.7 622.6,110.85 L622.6,246.85 C622.6,258 628.2,263.6 639.35,263.6 L677.25,263.6 C688.4,263.6 693.95,258 693.95,246.85 L693.95,110.85z" />
+    </g>
+  </g>
+  <g
+     id="Calque.__207">
+    <g
+       id="shape12">
+      <path
+         id="path7"
+         fill="#FFFFFF"
+         fill-opacity="1"
+         d="M162,186.05 L162,104.05 C162,97.4 158.65,94.05 152,94.05 L133,94.05 C126.35,94.05 123,97.4 123,104.05 L123,186.05 C123,192.7 126.35,196.05 133,196.05 L152,196.05 C158.65,196.05 162,192.7 162,186.05z" />
+      <path
+         id="path8"
+         fill="#F9D346"
+         fill-opacity="1"
+         d="M142.9,904.2 C136.3,904.2 130.65,906.55 126,911.2 121.35,915.85 119,921.5 119,928.1 119,934.7 121.35,940.35 126,945 130.65,949.65 136.3,952 142.9,952 149.5,952 155.15,949.65 159.8,945 164.45,940.35 166.8,934.7 166.8,928.1 166.8,921.5 164.45,915.85 159.8,911.2 155.15,906.55 149.5,904.2 142.9,904.2z M867.4,911.2 C862.75,915.85 860.4,921.5 860.4,928.1 860.4,934.7 862.75,940.35 867.4,945 872.05,949.65 877.7,952 884.3,952 890.9,952 896.55,949.65 901.2,945 905.85,940.35 908.2,934.7 908.2,928.1 908.2,921.5 905.85,915.85 901.2,911.2 896.55,906.55 890.9,904.2 884.3,904.2 877.7,904.2 872.05,906.55 867.4,911.2z" />
+    </g>
+  </g>
+</svg>

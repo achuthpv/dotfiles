@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 128 128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   sodipodi:docname="bitwig-studio.svg"
+   width="128"
+   height="128">
+  <metadata
+     id="metadata53">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     id="namedview51"
+     showgrid="false"
+     inkscape:zoom="3.4766083"
+     inkscape:cx="36.405452"
+     inkscape:cy="71.333465"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="0"
+       gradientUnits="userSpaceOnUse"
+       y1="653.96002"
+       x2="0"
+       y2="301.29999"
+       gradientTransform="matrix(0.34234642,0,0,0.34234642,175.83595,-99.571961)">
+      <stop
+         stop-color="#c52828"
+         id="stop7" />
+      <stop
+         id="stop3400"
+         stop-color="#c52828"
+         offset="0.41732636"
+         style="stop-color:#ff0000;stop-opacity:1" />
+      <stop
+         offset="1"
+         stop-color="#ff5454"
+         id="stop9" />
+    </linearGradient>
+  </defs>
+  <circle
+     style="fill:url(#0);fill-opacity:1"
+     id="circle13"
+     r="59.379986"
+     cy="64.326385"
+     cx="64.268669" />
+  <g
+     style="fill:#ffffff;fill-opacity:0.85100002"
+     id="g15"
+     transform="matrix(2.827541,0,0,2.827541,9.1367918,27.536506)">
+    <g
+       id="g17"
+       transform="translate(0,-10)">
+      <circle
+         id="circle19"
+         cy="18"
+         cx="12"
+         r="2" />
+      <circle
+         id="circle21"
+         cy="18"
+         cx="17"
+         r="2" />
+      <circle
+         id="circle23"
+         cy="18"
+         cx="22"
+         r="2" />
+      <circle
+         id="circle25"
+         cy="18"
+         cx="27"
+         r="2" />
+    </g>
+    <g
+       id="g27"
+       transform="translate(0,-5)">
+      <circle
+         id="circle29"
+         cy="18"
+         cx="12"
+         r="2" />
+      <circle
+         id="circle31"
+         cy="18"
+         cx="17"
+         r="2" />
+      <circle
+         id="circle33"
+         cy="18"
+         cx="22"
+         r="2" />
+      <circle
+         id="circle35"
+         cy="18"
+         cx="27"
+         r="2" />
+    </g>
+    <g
+       style="fill:#ffffff"
+       id="g37">
+      <circle
+         id="circle39"
+         transform="translate(5,-5)"
+         cy="18"
+         cx="27"
+         r="2" />
+      <circle
+         id="circle41"
+         transform="translate(-20,-5)"
+         cy="18"
+         cx="27"
+         r="2" />
+      <circle
+         id="circle43"
+         transform="translate(-20,0)"
+         cy="18"
+         cx="27"
+         r="2" />
+      <circle
+         id="circle45"
+         transform="translate(-15,0)"
+         cy="18"
+         cx="27"
+         r="2" />
+      <circle
+         id="circle47"
+         transform="translate(5,0)"
+         cy="18"
+         cx="27"
+         r="2" />
+      <circle
+         id="circle49"
+         cy="18"
+         cx="27"
+         r="2" />
+    </g>
+  </g>
+</svg>
