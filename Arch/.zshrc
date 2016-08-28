@@ -13,14 +13,25 @@
 #Before using, look all the confs with attention, and solve all dependencies to work properly               #
 #The aliases used in this configuration are exclusive from Arch Linux and derivates.                        #
 #############################################################################################################
-#Rainbow
-#export WORKON_HOME=~/.rainbow
+
 #source /usr/bin/virtualenvwrapper.sh
 
 # Variables:
   export BROWSER="firefox"
   export EDITOR="vim"
- 
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# Makes fonts darker and thicker
+export INFINALITY_FT_BRIGHTNESS="-10"
+
+# Not too sharp, not too smooth
+export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16" 
+
+
 # Zsh-syntax-highlighting
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #Syntax-highlighting  similar to shell Fish. Its necessary install the package zsh-syntax-highlighting
@@ -305,17 +316,6 @@ function  psuser() {
  ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ;
 }
  
-function imgur-upl() { # Image upload to imgur site
-        curl -s -F image=@"$1" -F "key=1913b4ac473c692372d108209958fd15" \
-        http://api.imgur.com/2/upload.xml | grep -Eo "<original>(.)*</original>" \
-        | grep -Eo "http://i.imgur.com/[^<]*"
-}
- 
-#hastebin
-function haste() { # File upload to hastebin, with syntax highlight support.
-a=$(cat); curl -X POST -s -d "$a" http://hastebin.com/documents | awk -F '"' '{print "http://hastebin.com/"$4}';
-}
- 
 function start() { sudo systemctl start $@ ; }
 function stop()  { sudo systemctl stop $@ ;  }
 function restart() { sudo systemctl restart $@ ; }
@@ -444,11 +444,13 @@ alias gpom='git push origin master'
 #Aliases  pacman
  alias pacsearch="pacman -Sl | cut -d' ' -f2 | grep " # It allows you to search all available packages simply using 'pacsearch packagename':
  alias pkglist="comm -13 <(pacman -Qmq | sort) <(pacman -Qqe | sort) > pkglist" # Create list of all installed packages
+ alias bck=" pacman -Q | awk '{print $1}' > package_list.txt"
  alias pacup='sudo pacman -Syu' # Synchronises repositories and updates if you have any update
  alias pacre='sudo pacman -Rns' # Remove a specific package and all its dependencies and configurations
  alias pacorf='sudo pacman -Rns $(pacman -Qtdq)' # Create list of orphaned packages for removal
  alias pacin='sudo pacman -S' # Install a specific package
- 
+  
+
 #Aliases  yaourt
  alias yaupg='yaourt -Syua' # Synchronises repositories and updates if you have any update by aur
  alias yain='yaourt -S' # Install a specific package
@@ -478,3 +480,4 @@ alias gpom='git push origin master'
 alias systemctl reboot="sudo systemctl reboot"
 alias systemctl poweroff="sudo systemctl poweroff"
 alias systemctl halt="sudo systemctl halt"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
